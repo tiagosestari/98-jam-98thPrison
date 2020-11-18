@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/player.png" type="Texture" id=1]
+[ext_resource path="res://Canon.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.0411, 12.2745 )
+
+[node name="Canon" type="Sprite"]
+scale = Vector2( 3.8453, 4.05387 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 3, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.0919451, 0 )
+scale = Vector2( 0.333333, 0.333333 )
+shape = SubResource( 1 )
+
+[node name="RightCanon" type="Position2D" parent="."]
+position = Vector2( 16.435, 0 )
+
+[node name="FrontCanon" type="Position2D" parent="."]
+position = Vector2( -0.00310993, -17.2097 )
+rotation = -1.5708
+
+[node name="LeftCanon" type="Position2D" parent="."]
+position = Vector2( -17.2674, 0.0858376 )
+rotation = 3.14159
+
+[node name="BackCanon" type="Position2D" parent="."]
+position = Vector2( -0.00310993, 17.5016 )
+rotation = 1.5708
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
