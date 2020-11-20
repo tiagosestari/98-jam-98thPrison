@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ligando o jogo.wav-b5fb93955242957aba7fe23f1f6e26c0.sample"
+
+[deps]
+
+source_file="res://assets/sons/ligando o jogo.wav"
+dest_files=[ "res://.import/ligando o jogo.wav-b5fb93955242957aba7fe23f1f6e26c0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
