@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/assets inicialização/barracinza.png" type="Texture" id=1]
+[ext_resource path="res://assets/assets inicialização/janeladesMeuPc.png" type="Texture" id=2]
+[ext_resource path="res://hpmeter.gd" type="Script" id=3]
+[ext_resource path="res://assets/assets inicialização/pcvermelho.png" type="Texture" id=4]
+[ext_resource path="res://pcvermelho.gd" type="Script" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ null, ExtResource( 4 ), null ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
+} ]
+
+[node name="hpmeter" type="Sprite"]
+position = Vector2( 118.5, 118 )
+scale = Vector2( 0.467078, 0.452381 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="pcvermelho" type="AnimatedSprite" parent="."]
+position = Vector2( 1.07047, 17.6841 )
+scale = Vector2( 1, 1 )
+frames = SubResource( 1 )
+animation = "idle"
+frame = -1
+playing = true
+script = ExtResource( 5 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 336.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Control"]
+margin_left = -163.784
+margin_top = 163.579
+margin_right = 161.216
+margin_bottom = 203.579
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_progress = Color( 0, 0, 0.501961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

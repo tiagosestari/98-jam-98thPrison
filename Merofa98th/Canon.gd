@@ -13,6 +13,7 @@ func _exit_tree():
 	Global.player = null
 
 func _process(delta):
+	
 	#Rotate
 	if Input.is_action_pressed("ui_left"):
 		rotation = rotation - ROTATION_SPEED * delta
@@ -45,9 +46,19 @@ func _process(delta):
 
 func _on_Area2D_area_entered(area):
 	area.queue_free()
-	if Global.health > 1:
-		Global.health = Global.health -1
+	if Global.health < 100:	
+		Global.health = Global.health + 20
 		print("HP: " + str(Global.health))
+		Global.pcHurt.play("hit")
 	else:
 		print("Game over")
-		queue_free()
+		var nodebuffer = get_parent()
+		var main = nodebuffer.get_parent()
+		var gameover_resource = load("res://GameOver.tscn")
+		
+		var gameover = gameover_resource.instance()
+		main.add_child(gameover)
+		var map = main.get_node("Map")
+		main.remove_child(map)
+		
+		#queue_free()

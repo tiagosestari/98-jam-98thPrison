@@ -2,7 +2,7 @@
 extends Area2D
 
 const SHOT_SPEED = 200
-var timer
+
 
 func _ready():
 	set_process(true)

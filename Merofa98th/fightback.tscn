@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/erros/FIGHTBACK.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets inicialização/2.png" type="Texture" id=2]
 [ext_resource path="res://fightback.gd" type="Script" id=3]
+[ext_resource path="res://assets/assets inicialização/falasigma.png" type="Texture" id=4]
 
 [node name="fightback" type="Sprite"]
 position = Vector2( 400, 300 )
@@ -10,8 +11,13 @@ scale = Vector2( 0.625, 0.585938 )
 texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
+[node name="falasigma" type="Sprite" parent="."]
+position = Vector2( 12.8, -197.973 )
+scale = Vector2( 0.593333, 0.474716 )
+texture = ExtResource( 4 )
+
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -12.8, 6.82666 )
+position = Vector2( 0, 143.36 )
 scale = Vector2( 0.406425, 0.316997 )
 texture = ExtResource( 1 )
 
