@@ -3,7 +3,7 @@
 ### Theme: windows 98 Main Mechanics: Rotation
 ### Itch.io: https://edgarallancode.itch.io/merofa98thprison
 
-###Team [3]:
+### Team [3]:
 - JonasLazuli (Leonel Ferro) - Animation and Design
 - Thunderstucker (Nágila Seidenstucker) -  Assets, Sound, and Design
 - EdgarAllanCode (Tiago Sestari) - Code, Animation, and Design
