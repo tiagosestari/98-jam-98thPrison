@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/POL-its-a-blast-short.wav-1dcafbb5f4ce413c3fdbba7df162af09.sample"
+
+[deps]
+
+source_file="res://assets/sons/POL-its-a-blast-short.wav"
+dest_files=[ "res://.import/POL-its-a-blast-short.wav-1dcafbb5f4ce413c3fdbba7df162af09.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

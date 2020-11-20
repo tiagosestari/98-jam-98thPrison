@@ -9,6 +9,7 @@ var setFollow = 0;
 
 
 func _process(delta):
+			
 	rand.randomize()
 	setFollow = rand.randf_range(0,10)
 	if Global.player != null:

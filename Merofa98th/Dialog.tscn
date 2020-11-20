@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Merofas 98th Prison.ogv" type="VideoStream" id=1]
+[ext_resource path="res://Dialog.gd" type="Script" id=2]
+[ext_resource path="res://assets/sons/música durante o jogo.wav" type="AudioStream" id=3]
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Dialog" type="VideoPlayer" parent="."]
+margin_right = 797.0
+margin_bottom = 598.0
+stream = ExtResource( 1 )
+autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+[connection signal="finished" from="Dialog" to="." method="_on_Dialog_finished"]

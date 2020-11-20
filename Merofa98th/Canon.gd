@@ -22,6 +22,8 @@ func _process(delta):
 		
 	#Shot
 	if Input.is_action_just_pressed("ui_accept"):
+		var sound = get_node("SoundNode/ClickShot")
+		sound.play()
 		var shot_right = SHOT_SCENE.instance()
 		var shot_front = SHOT_SCENE.instance()
 		var shot_left = SHOT_SCENE.instance()
@@ -50,6 +52,9 @@ func _on_Area2D_area_entered(area):
 		Global.health = Global.health + 20
 		print("HP: " + str(Global.health))
 		Global.pcHurt.play("hit")
+		var sound = get_node("SoundNode/AlarmBeep")
+		sound.play()
+		
 	else:
 		print("Game over")
 		var nodebuffer = get_parent()
@@ -60,5 +65,6 @@ func _on_Area2D_area_entered(area):
 		main.add_child(gameover)
 		var map = main.get_node("Map")
 		main.remove_child(map)
+		Global.cameFrom = 1
 		
 		#queue_free()

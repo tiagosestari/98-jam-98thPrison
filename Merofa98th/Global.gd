@@ -9,3 +9,8 @@ var health = 0
 var pcHurt = null
 
 var scoreBoard = null
+
+var cameFrom = null
+
+
+var difficulty = 5

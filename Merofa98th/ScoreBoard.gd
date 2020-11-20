@@ -6,5 +6,5 @@ func _ready():
 	
 func _process(delta):
 	var scoreText = Global.scoreBoard.get_node("checkmark/Control/score")
-	scoreText.text = String(Global.points) + " Bugs Corrected"
+	scoreText.text = String(Global.points) + " \nBugs Corrected"
 	

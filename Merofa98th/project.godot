@@ -15,9 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Merofa 98 Th"
+config/name="MerofaNinetyEigth"
 run/main_scene="res://Main.tscn"
-config/icon="res://icon.png"
 
 [autoload]
 
@@ -26,6 +25,7 @@ Global="*res://Global.gd"
 [display]
 
 window/size/width=800
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 
 [rendering]

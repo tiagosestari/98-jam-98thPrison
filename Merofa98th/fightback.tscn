@@ -40,13 +40,28 @@ anchor_left = 0.183
 anchor_top = 0.59
 anchor_right = 0.394
 anchor_bottom = 0.725
-margin_left = -894.465
-margin_top = -608.881
-margin_right = -894.155
-margin_bottom = -609.346
+margin_left = -894.57
+margin_top = -565.81
+margin_right = -894.26
+margin_bottom = -609.275
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Sprite"]
+anchor_left = 0.183
+anchor_top = 0.59
+anchor_right = 0.394
+anchor_bottom = 0.725
+margin_left = -894.57
+margin_top = -694.81
+margin_right = -894.26
+margin_bottom = -738.275
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Sprite/Button3" to="." method="_on_Button3_pressed"]
