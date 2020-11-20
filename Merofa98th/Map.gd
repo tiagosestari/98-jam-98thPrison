@@ -5,6 +5,8 @@ var enemy_1 = preload("res://Enemy.tscn")
 func _on_Timer_timeout():
 	var rand = RandomNumberGenerator.new()
 	var screen_size = get_viewport().get_visible_rect().size
+	var sprite_size = get_node("Sprite").texture.get_size()
+	print(sprite_size)
 	
 	for _i in range(0,5):
 		var enemy = enemy_1.instance()

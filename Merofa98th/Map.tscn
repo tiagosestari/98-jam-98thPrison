@@ -1,14 +1,27 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Canon.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Map.gd" type="Script" id=2]
+[ext_resource path="res://assets/assets inicialização/bg-cortado.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/assets inicialização/2.png" type="Texture" id=4]
 
 [node name="Map" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Canon" parent="." instance=ExtResource( 1 )]
-position = Vector2( 414, 312 )
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 400, 300 )
+scale = Vector2( 0.625, 0.585938 )
+texture = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 463.016, 288 )
+scale = Vector2( 0.638735, 0.768 )
+texture = ExtResource( 3 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="Canon" parent="." instance=ExtResource( 1 )]
+position = Vector2( 464, 288 )
+scale = Vector2( 1, 1 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

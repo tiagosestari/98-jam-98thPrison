@@ -2,7 +2,7 @@ extends Sprite
 
 const SHOT_SCENE = preload("Shot.tscn")
 const ROTATION_SPEED = 1.5
-var HP = 2
+
 
 
 func _ready():
@@ -45,9 +45,9 @@ func _process(delta):
 
 func _on_Area2D_area_entered(area):
 	area.queue_free()
-	if HP > 1:
-		HP = HP -1
-		print("HP: " + str(HP))
+	if Global.health > 1:
+		Global.health = Global.health -1
+		print("HP: " + str(Global.health))
 	else:
 		print("Game over")
 		queue_free()

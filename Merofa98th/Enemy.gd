@@ -6,6 +6,8 @@ var rand = RandomNumberGenerator.new()
 var rand_direction = RandomNumberGenerator.new()
 var setFollow = 0;
 
+
+
 func _process(delta):
 	rand.randomize()
 	setFollow = rand.randf_range(0,10)
@@ -18,8 +20,14 @@ func _process(delta):
 			movement = Vector2(x_random_dir,y_random_dir)
 		else:
 			movement = global_position.direction_to(Global.player.global_position)
+		
+		global_position += movement*speed*delta
+
+
 	
-	global_position += movement*speed*delta
+
+	
+	
 
 
 
