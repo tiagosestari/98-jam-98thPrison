@@ -1,6 +1,8 @@
 extends Sprite
 
 func _ready():
+	Global.health = 0
+	Global.difficulty = 5
 	if Global.points > 200:
 		self.get_node("ScoreBoard/RichTextLabel").visible = true
 	else:
